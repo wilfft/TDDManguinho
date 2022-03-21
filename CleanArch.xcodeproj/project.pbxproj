@@ -10,9 +10,12 @@
 		3D4FE5D927E7B1D500DDC7C7 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE5D827E7B1D400DDC7C7 /* AddAccount.swift */; };
 		3D4FE5DB27E7B28E00DDC7C7 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE5DA27E7B28E00DDC7C7 /* AccountModel.swift */; };
 		3D4FE62927E7B6A600DDC7C7 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4FE62127E7B6A600DDC7C7 /* Data.framework */; };
-		3D4FE62E27E7B6A600DDC7C7 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE62D27E7B6A600DDC7C7 /* DataTests.swift */; };
+		3D4FE62E27E7B6A600DDC7C7 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE62D27E7B6A600DDC7C7 /* RemoteAddAccountTests.swift */; };
 		3D4FE63727E7B6C300DDC7C7 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4FE5D127E7B18A00DDC7C7 /* Domain.framework */; };
 		3D4FE63827E7B6C300DDC7C7 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4FE5D127E7B18A00DDC7C7 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D4FE63D27E8F4AE00DDC7C7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE63C27E8F4AE00DDC7C7 /* Model.swift */; };
+		3D4FE63F27E8F56600DDC7C7 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE63E27E8F56600DDC7C7 /* RemoteAddAccount.swift */; };
+		3D4FE64127E8F5A300DDC7C7 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE64027E8F5A300DDC7C7 /* HttpPostClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +56,10 @@
 		3D4FE5DA27E7B28E00DDC7C7 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3D4FE62127E7B6A600DDC7C7 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4FE62827E7B6A600DDC7C7 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D4FE62D27E7B6A600DDC7C7 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		3D4FE62D27E7B6A600DDC7C7 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
+		3D4FE63C27E8F4AE00DDC7C7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3D4FE63E27E8F56600DDC7C7 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
+		3D4FE64027E8F5A300DDC7C7 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +122,8 @@
 		3D4FE5D227E7B18A00DDC7C7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				3D4FE5D827E7B1D400DDC7C7 /* AddAccount.swift */,
-				3D4FE5DA27E7B28E00DDC7C7 /* AccountModel.swift */,
+				3D4FE64227E8F62D00DDC7C7 /* UseCases */,
+				3D4FE64327E8F63A00DDC7C7 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -125,6 +131,8 @@
 		3D4FE62227E7B6A600DDC7C7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3D4FE64427E8F64000DDC7C7 /* UseCases */,
+				3D4FE64527E8F64D00DDC7C7 /* Http */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -132,7 +140,7 @@
 		3D4FE62C27E7B6A600DDC7C7 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D4FE62D27E7B6A600DDC7C7 /* DataTests.swift */,
+				3D4FE64627E8F65400DDC7C7 /* UseCases */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -142,6 +150,47 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D4FE64227E8F62D00DDC7C7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3D4FE5D827E7B1D400DDC7C7 /* AddAccount.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3D4FE64327E8F63A00DDC7C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D4FE5DA27E7B28E00DDC7C7 /* AccountModel.swift */,
+				3D4FE63C27E8F4AE00DDC7C7 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D4FE64427E8F64000DDC7C7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3D4FE63E27E8F56600DDC7C7 /* RemoteAddAccount.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3D4FE64527E8F64D00DDC7C7 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				3D4FE64027E8F5A300DDC7C7 /* HttpPostClient.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		3D4FE64627E8F65400DDC7C7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3D4FE62D27E7B6A600DDC7C7 /* RemoteAddAccountTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +285,7 @@
 					};
 					3D4FE62027E7B6A600DDC7C7 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 					3D4FE62727E7B6A600DDC7C7 = {
 						CreatedOnToolsVersion = 13.3;
@@ -291,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4FE63D27E8F4AE00DDC7C7 /* Model.swift in Sources */,
 				3D4FE5D927E7B1D500DDC7C7 /* AddAccount.swift in Sources */,
 				3D4FE5DB27E7B28E00DDC7C7 /* AccountModel.swift in Sources */,
 			);
@@ -300,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4FE64127E8F5A300DDC7C7 /* HttpPostClient.swift in Sources */,
+				3D4FE63F27E8F56600DDC7C7 /* RemoteAddAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D4FE62E27E7B6A600DDC7C7 /* DataTests.swift in Sources */,
+				3D4FE62E27E7B6A600DDC7C7 /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +566,7 @@
 		3D4FE63127E7B6A600DDC7C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -536,6 +590,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -543,6 +598,7 @@
 		3D4FE63227E7B6A600DDC7C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -573,6 +629,7 @@
 		3D4FE63427E7B6A600DDC7C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KFXR7P622C;
@@ -590,6 +647,7 @@
 		3D4FE63527E7B6A600DDC7C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KFXR7P622C;
